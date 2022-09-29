@@ -49,7 +49,7 @@ def get_countries_data(url):
 if __name__=='__main__':
     url = 'https://countries.trevorblades.com/'
 
-    with sqlite3.connect("multitable_countries.db") as con:
+    with sqlite3.connect("./multitable_countries.db") as con:
         ctry_table = 'countries'
         cont_table = 'continents'
         lang_table = 'languages'
@@ -83,7 +83,7 @@ if __name__=='__main__':
             IngestData.ctry_insert(country, ctry_table, con)
 
 
-
+    print("COMPLETED")
 
 
 
