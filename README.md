@@ -17,7 +17,7 @@ docker build -t country_db:v1 .
 docker run -v pwd:/project -it country_db:v1
 ```
 
-An sqlite database file named `multitable_countries.db` will be written to the the present directory, containing the four tables.
+An sqlite database file named `multitable_countries.db` will be written to the the present local directory, containing the four tables.
 
 # Part 3: AWS Implementation
 Due to the small size and short runtime of the script, one of the least expensive and quickest options would be to migrate the scripts into Lambda, either by sending the packaged code and dependencies to AWS or by using a public lambda image such as `public.ecr.aws/lambda/python:3.9` if the package exceeds size limits. If only a `.db` file is required, the database can be held in lambda's temporary storage, but the number of concurrent lambda instances will need to be set to 1.
