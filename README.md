@@ -12,9 +12,9 @@ Now splitting the single table into four, we have the `countries`, `currency`, `
 ```
 docker build -t country_db:v1 .
 
-# In the following, replace *pwd* with the path of the current working directory of this repository.
+# In the following, replace pwd with the path of the current working directory of this repository.
 
-docker run -v **pwd**:/project -it country_db:v1
+docker run -v pwd:/project -it country_db:v1
 ```
 
 An sqlite database file named `multitable_countries.db` will be written to the the present directory, containing the four tables.
