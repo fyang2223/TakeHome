@@ -1,0 +1,2 @@
+# Section 1: Minimum Requirements
+The `IngestLocal.py` script satisfies the two minimum requirements of the exercise. Before execution, make sure that either `pyarrow` or `fastparquet` is installed in the environment with pip, as one will be necessary for the conversion to parquet. The output after execution will be a `countries.db` file, where the sqlite database data is stored, and an `output.parquet` file for the database.
